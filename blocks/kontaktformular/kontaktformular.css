@@ -1,0 +1,131 @@
+.kontaktformular form input,
+.kontaktformular form textarea {
+	background-color: white;
+	width: 100%;
+	line-height: 1;
+	resize: none;
+	padding: 20px;
+	border-radius: 5px;
+	border-width: 4px;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.61, 0, 0.35, 1);
+	font-size: 20px;
+	outline-offset: 0px;
+	border-style: solid;
+	border-color: white;
+	color: #5e5e5e;
+}
+
+.kontaktformular {
+	background-color: #464646;
+}
+
+.kontaktformular h1.blocktitle {
+	text-align: left;
+}
+
+.kontaktformular form  textarea {
+	border-radius: 2px;
+}
+
+.kontaktformular form input:focus,
+.kontaktformular form textarea:focus,
+.kontaktformular form input:active,
+.kontaktformular form textarea:active {
+	outline: none;
+	border: 4px solid #db5b5b;
+}
+
+.kontaktformular form label {
+	width: 100%;
+	margin-bottom: unset;
+}
+
+.kontaktformular form label[for="name"],
+.kontaktformular form label[for="email"] {
+	width: 100% ;
+}
+
+.kontaktformular form .form-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.kontaktformular form .form-row:last-of-type{
+	margin-bottom: unset;
+}
+
+.kontaktformular form input[type="submit"] {
+	border: solid 4px white;
+	cursor: pointer;
+	height: 55px;
+	padding: 0;
+	color: #db5b5b;
+  	font-weight: bolder;
+}
+
+.kontaktformular form input[type="submit"]:hover,
+.kontaktformular form input[type="submit"]:active,
+.kontaktformular form input[type="submit"]:focus {
+	border: solid 4px #db5b5b;
+	color: white;
+	background-color: #db5b5b;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (max-width: 1599.98px) {
+
+}
+
+@media only screen and (max-width: 1399.98px) {
+
+}
+
+@media only screen and (max-width: 1199.98px) {
+	.kontaktformular form {
+		margin-top: 15px;
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	.kontaktformular form input, 
+    .kontaktformular form textarea {
+    	padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+	section.kontaktformular h1.blocktitle {
+    	text-align: center;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+
+}
+
+@media only screen and (max-width: 499.98px) {
+
+}
+
+@media only screen and (max-width: 449.98px) {
+
+}
+
+@media only screen and (max-width: 399.98px) {
+
+}
+
+@media only screen and (max-width: 349.98px) {
+
+}
+
+@media only screen and (max-width: 319.98px) {
+
+}

@@ -1,0 +1,167 @@
+.team {
+	padding-top: unset;
+}
+
+.team > div > div {
+	display: flex;
+	flex-direction: row;
+}
+
+.team > div {
+	display: flex;
+	align-self: stretch;
+}
+
+.team > div:nth-of-type(even) > div {
+	flex-direction: row-reverse;
+}
+
+.team > div > div > div {
+	width: 50%;
+}
+
+.team > div:nth-of-type(even) .img-wrapper img {
+	left: 0%;
+	right: 50%;
+}
+
+.team .img-wrapper img {
+	object-fit: cover;
+	position: absolute;
+	left: 50%;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+
+.team > div:nth-of-type(even) .text-wrapper {
+	padding-left: 50px;
+}
+
+.team .text-wrapper {
+	padding-right: 50px;
+	font-family: "Roboto";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.team .text-wrapper p {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.team .text-wrapper p.sp{
+	font-weight: 500;
+	font-size: 24px;
+	font-variant: small-caps;
+	margin-bottom: 2rem;
+}
+
+.team .text-wrapper p.sp:first-of-type {
+	margin-bottom: 1rem;
+}
+
+.team h2 {
+	font-family: "Times New Roman";
+	font-size: 85px;
+	font-weight: 700;
+}
+
+.team > div {
+	position: relative;
+	min-height: 700px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (max-width: 1599.98px) {
+	.team h2 {
+		font-size: 80px;
+	}
+
+	.team .text-wrapper p.sp {
+		font-size: 20px;
+	}
+
+	.team .text-wrapper p {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 1399.98px) {
+	.team h2 {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width: 1199.98px) {
+	.team > div {
+		min-height: 600px;
+	}
+}
+
+@media only screen and (max-width: 991.98px) {
+	.team h2 {
+		font-size: 45px;
+	}
+
+	.team > div {
+		min-height: 460px;
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	.team > div > div,
+	.team > div:nth-of-type(2n) > div {
+		flex-direction: column;
+	}
+
+	.team > div > div > div {
+		width: 100%;
+	}
+
+	.team .img-wrapper img {
+		object-fit: cover;
+		width: 100%;
+		position: static;
+	}
+
+	.team > div:nth-of-type(2n) .text-wrapper,
+	.team .text-wrapper {
+		padding-left: unset;
+		padding-right: unset;
+	}
+
+	.team > div {
+		min-height: unset;
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 575.98px) {
+
+}
+
+@media only screen and (max-width: 499.98px) {
+
+}
+
+@media only screen and (max-width: 449.98px) {
+
+}
+
+@media only screen and (max-width: 399.98px) {
+
+}
+
+@media only screen and (max-width: 349.98px) {
+
+}
+
+@media only screen and (max-width: 319.98px) {
+
+}

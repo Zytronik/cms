@@ -1,0 +1,236 @@
+/* Responsive */
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (max-width: 1599.98px) {
+
+}
+
+@media only screen and (max-width: 1399.98px) {
+    .login-page .login-form {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .login-page .login-form, 
+    .login-page .login-background {
+        width: 100%;
+    }
+
+    .login-page {
+        overflow-x: hidden;
+    }
+
+    .login-page .login-background {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .login-page .login-form {
+        padding: 50px 15px;
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .login-page .login-form::after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500%;
+        z-index: -1;
+        left: -200%;
+        height: 100%;
+    }
+
+    .login-page .login-wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    header ul li {
+        margin-left: 20px;
+    }
+
+    .login-page .login-form {
+        max-width: 720px;
+    }
+
+    .gallery-img-wrapper i {
+        height: 20px;
+        width:  20px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    footer .copyright {
+        text-align: right;
+    }
+
+    footer .development {
+        display: none;
+    }
+
+    .login-page .login-form {
+        max-width: 540px;
+    }
+
+    header ul li a span {
+        display: none;
+    }
+
+    header ul li a {
+        padding: 10px;
+    }
+
+    header a i {
+        margin-right: unset;
+    }
+
+    header ul li {
+        margin-left: 10px;
+    }
+
+    header ul li:last-of-type a {
+        padding-right: unset;
+    }
+
+    header {
+        top: 30px;
+    }
+
+    .page-list .title-id span {
+        display: none;
+    }
+
+    .gallery-img-wrapper img {
+        max-height: 160px;
+    }
+
+    .gallery-img-wrapper i {
+        height: 20px;
+        width:  20px;
+        font-size: 12px;
+    }
+
+    section > .container-large {
+        padding: 25px 15px 25px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    footer .copyright {
+        text-align: left;
+    }
+
+    footer .development {
+        display: block;
+        text-align: left;
+    }
+
+    .new-block-page table {
+        border: 0;
+    }
+
+    .new-block-page table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .new-block-page table tr td:nth-last-child(2) {
+        padding-left: unset;
+    }
+
+    .new-block-page table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .new-block-page table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .new-block-page table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .new-block-page table td:last-child {
+        border-bottom: 0;
+    }
+
+    .new-block-page table button {
+        padding-right: unset;
+        padding-left: 80%;
+    }
+}
+
+@media only screen and (max-width: 499.98px) {
+    body {
+        font-size: 14px;
+    }
+
+    header a i {
+        font-size: 16px;
+    }
+
+    section h1 {
+        font-size: 25px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 449.98px) {
+    .gallery-img-wrapper img {
+        max-height: 120px;
+    }
+}
+
+@media only screen and (max-width: 399.98px) {
+    header ul li {
+        margin-left: unset;
+    }
+
+    .page-list .row > div:first-of-type {
+        padding-left: 15px;
+    }
+
+    .page-list .row > div:last-of-type {
+        padding-right: 15px;
+    }
+
+    .page-list .row > div {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (max-width: 349.98px) {
+
+}
+
+@media only screen and (max-width: 319.98px) {
+
+}
