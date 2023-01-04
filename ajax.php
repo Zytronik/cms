@@ -1,4 +1,5 @@
 <?php include("functions.php");
+ignore_user_abort(true);
 
 if(isset($_POST["action"]) && !empty($_POST["action"])) {
 	include 'dbConfig.php';
@@ -20,6 +21,50 @@ if(isset($_POST["action"]) && !empty($_POST["action"])) {
             	}
         	}
         }
+		exit();
+	}
+
+	function addAnalytics($conn) {
+		function convertBool($string){
+			if($string == "true"){
+				return true;
+			}
+			return false;
+		}
+
+		$data = $_POST['data'];
+		$insert_data = "INSERT into analytics (
+			timeOpened,
+			timeLeft,
+			timezone,
+			pageon,
+			historyLenght,
+			browserName,
+			browserLanguage,
+			os,
+			location,
+			ip,
+			isMobile,
+			windowWidth,
+			windowHeight,
+			linkClickhistory
+		) VALUES (
+			'".$data["timeOpened"]."',
+			'".$data["timeLeft"]."',
+			'".$data["timezone"]."',
+			'".$data["pageon"]."',
+			'".$data["historyLenght"]."',
+			'".$data["browserName"]."',
+			'".$data["browserLanguage"]."',
+			'".$data["os"]."',
+			'".json_encode($data["location"])."',
+			'".$data["ip"]."',
+			".convertBool($data["isMobile"]).",
+			'".$data["windowWidth"]."',
+			'".$data["windowHeight"]."',
+			'".json_encode($data["linkClickhistory"])."'
+		)";
+		$conn->query($insert_data);
 		exit();
 	}
 

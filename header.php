@@ -29,6 +29,7 @@ include 'dbConfig.php'; ?>
         <meta name="msapplication-TileColor" content="#292929">
 		
 		<script src="<?php echo get_directory_url(); ?>js/vendor/jquery.min.js"></script>
+		<script defer src="<?php echo get_directory_url(); ?>js/analytics.js"></script>
         <script defer src="<?php echo get_directory_url(); ?>js/vendor/bootstrap.min.js"></script>
 		<script defer src="<?php echo get_directory_url(); ?>js/vendor/masonry.pkgd.min.js"></script> 
         <script defer src="<?php echo get_directory_url(); ?>js/custom.js"></script>

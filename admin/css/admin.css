@@ -400,3 +400,72 @@ footer a:hover {
 .gallery-img-wrapper:last-of-type {
 	margin-right: unset;
 }
+
+/* Cockpit */
+.cockpit .chart {
+	background-color: #302f2f;
+	padding:15px;
+	margin: 15px 0;
+	border-radius: 10px;
+	color:white;
+}
+
+.cockpit .onlineVisitorChart {
+	display: flex;
+	align-items: center;
+}
+
+.cockpit .chart .chart-info {
+	width: 40%;
+	padding-right: 10px;
+}
+
+.cockpit .chart .chart-info p {
+	font-size: 120%;
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+.cockpit .chart .chart-info span {
+	font-size: 160%;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.cockpit .apexcharts-xaxis-label *,
+.cockpit .apexcharts-yaxis-label *,
+.cockpit .apexcharts-legend-text {
+	fill: #fff;
+	color: white !important;
+}
+
+.cockpit #visitorChart {
+	min-height: unset !important;
+}
+
+.cockpit .browserChart {
+	height: calc(100% - 30px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 180%;
+	font-weight: 600;
+}
+
+.cockpit .browserChart img {
+	height: 30px;
+}
+
+.cockpit .browserChart > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	padding-top: 5px;
+	min-width: 50px;
+}
+
+.cockpit .browserChart span {
+	color: #b6b6b6;
+}
