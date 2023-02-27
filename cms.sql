@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Jan 2023 um 20:29
+-- Erstellungszeit: 16. Jan 2023 um 21:50
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.6
 
@@ -20,6 +20,57 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `cms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `analytics`
+--
+
+CREATE TABLE `analytics` (
+  `ID` int(11) NOT NULL,
+  `timeOpened` varchar(256) NOT NULL,
+  `timeLeft` varchar(256) NOT NULL,
+  `timezone` varchar(256) NOT NULL,
+  `pageon` varchar(256) NOT NULL,
+  `historyLenght` int(11) NOT NULL,
+  `browserName` varchar(256) NOT NULL,
+  `browserLanguage` varchar(256) NOT NULL,
+  `os` varchar(256) NOT NULL,
+  `location` mediumtext NOT NULL,
+  `ip` varchar(256) NOT NULL,
+  `isMobile` tinyint(1) NOT NULL,
+  `windowWidth` float NOT NULL,
+  `windowHeight` float NOT NULL,
+  `linkClickhistory` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `analytics`
+--
+
+INSERT INTO `analytics` (`ID`, `timeOpened`, `timeLeft`, `timezone`, `pageon`, `historyLenght`, `browserName`, `browserLanguage`, `os`, `location`, `ip`, `isMobile`, `windowWidth`, `windowHeight`, `linkClickhistory`) VALUES
+(7, 'Sun Jan 01 2023 21:53:12 GMT+0100 (Mitteleuropäische Normalzeit)', 'Sun Jan 01 2023 21:53:22 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#services\"]'),
+(8, 'Mon Jan 02 2023 21:53:12 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 21:53:42 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#services\",\"http://localhost/cms/about-us\"]'),
+(9, 'Mon Jan 02 2023 22:01:06 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 22:01:14 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#contact\"]'),
+(10, 'Mon Jan 02 2023 22:13:55 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 22:14:01 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 5, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, 'null'),
+(11, 'Mon Jan 02 2023 22:17:36 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 22:17:38 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/impressum/', 6, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, 'null'),
+(12, 'Mon Jan 02 2023 22:18:00 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 22:18:02 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/impressum/', 6, 'Brave', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, 'null'),
+(13, 'Mon Jan 02 2023 22:18:06 GMT+0100 (Mitteleuropäische Normalzeit)', 'Mon Jan 02 2023 22:29:53 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/impressum/', 6, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, 'null'),
+(14, 'Tue Jan 03 2023 18:04:33 GMT+0100 (Mitteleuropäische Normalzeit)', 'Tue Jan 03 2023 18:04:39 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#contact\"]'),
+(15, 'Tue Jan 03 2023 19:34:58 GMT+0100 (Mitteleuropäische Normalzeit)', 'Tue Jan 03 2023 19:35:09 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#contact\"]'),
+(16, 'Tue Jan 03 2023 20:03:40 GMT+0100 (Mitteleuropäische Normalzeit)', 'Tue Jan 03 2023 20:04:07 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Safari', 'de', 'Win32', '\"\"', '', 0, 1920, 1080, '[\"http://localhost/cms/#contact\"]'),
+(17, 'Tue Jan 03 2023 21:12:54 GMT+0100 (Mitteleuropäische Normalzeit)', 'Tue Jan 03 2023 21:13:06 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 1920, 1080, '[\"http://localhost/cms/#contact\",\"http://localhost/cms/#contact\"]'),
+(18, 'Tue Jan 03 2023 22:07:27 GMT+0100 (Mitteleuropäische Normalzeit)', 'Tue Jan 03 2023 22:07:56 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 1920, 1080, '[\"http://localhost/cms/#contact\",\"http://localhost/cms/#services\"]'),
+(19, 'Wed Jan 04 2023 13:44:41 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:45:03 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 2, 'Firefox', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 1920, 1080, '[\"\",\"http://localhost/cms/#services\"]'),
+(20, 'Wed Jan 04 2023 13:47:02 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:47:16 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 2, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 384, 854, '[\"http://localhost/cms/#services\"]'),
+(21, 'Wed Jan 04 2023 13:47:02 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:50:56 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 2, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 384, 854, '[\"http://localhost/cms/#services\"]'),
+(22, 'Wed Jan 04 2023 13:51:03 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:51:10 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 384, 854, 'null'),
+(24, 'Wed Jan 04 2023 13:51:03 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:51:10 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 1, 384, 854, 'null'),
+(25, 'Wed Jan 04 2023 13:51:03 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:51:10 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 1, 384, 854, 'null'),
+(26, 'Wed Jan 04 2023 13:51:03 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 13:56:36 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 3, 'Chrome', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 1, 384, 854, 'null'),
+(27, 'Wed Jan 04 2023 17:10:00 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 17:10:09 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 0, 1920, 1080, 'null'),
+(28, 'Wed Jan 04 2023 17:10:00 GMT+0100 (Mitteleuropäische Normalzeit)', 'Wed Jan 04 2023 17:10:09 GMT+0100 (Mitteleuropäische Normalzeit)', '-1', '/cms/', 1, 'Firefox', 'de', 'Win32', '{\"ip\":\"77.58.154.189\",\"type\":\"ipv4\",\"continent_code\":\"EU\",\"continent_name\":\"Europe\",\"country_code\":\"CH\",\"country_name\":\"Switzerland\",\"region_code\":\"AG\",\"region_name\":\"Aargau\",\"city\":\"Wettingen\",\"zip\":\"8112\",\"latitude\":\"47.46342849731445\",\"longitude\":\"8.387579917907715\",\"location\":{\"geoname_id\":\"2658011\",\"capital\":\"Bern\",\"languages\":[{\"code\":\"de\",\"name\":\"German\",\"native\":\"Deutsch\"},{\"code\":\"fr\",\"name\":\"French\",\"native\":\"Franu00e7ais\"},{\"code\":\"it\",\"name\":\"Italian\",\"native\":\"Italiano\"}],\"country_flag\":\"https://assets.ipstack.com/flags/ch.svg\",\"country_flag_emoji\":\"ud83cudde8ud83cudded\",\"country_flag_emoji_unicode\":\"U+1F1E8 U+1F1ED\",\"calling_code\":\"41\",\"is_eu\":\"false\"}}', '77.58.154.189', 1, 1920, 1080, 'null');
 
 -- --------------------------------------------------------
 
@@ -484,6 +535,12 @@ CREATE TABLE `sf_repeater` (
 --
 
 --
+-- Indizes für die Tabelle `analytics`
+--
+ALTER TABLE `analytics`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indizes für die Tabelle `block`
 --
 ALTER TABLE `block`
@@ -594,6 +651,12 @@ ALTER TABLE `sf_repeater`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
+
+--
+-- AUTO_INCREMENT für Tabelle `analytics`
+--
+ALTER TABLE `analytics`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT für Tabelle `block`

@@ -169,13 +169,40 @@ function onlineVisitorChart() {
 countryChart();
 
 function countryChart() {
+    var strucData = [];
+    var finalData = [];
+    var labels = [];
+
+    data.forEach(function (ele) {
+        var location = JSON.parse(ele.location);
+        if (location != null && location != "") {
+            for (const key in location) {
+                if (location.country_name != null && location.country_name != "" && location.country_name != null && location.country_name != "") {
+                    var flag = location.location.country_flag_emoji_unicode.replaceAll("U+", "&#x").replace(" ", ";")+";";
+                    var c = location.country_name+" "+flag;
+                    if (typeof strucData[c] == 'undefined') {
+                        strucData[c] = 1;
+                    } else {
+                        strucData[c] += 1;
+                    }
+                }
+            };
+        }
+    });
+
+    for (const key in strucData) {
+        finalData.push(strucData[key]);
+        labels.push(key);
+    }
+
     var options = {
-        series: [44, 55, 41, 17, 15],
+        series: finalData,
         chart: {
             type: 'donut',
             height: 400,
             width: "100%"
         },
+        labels: labels,
         title: {
             text: 'Besucher Herkunft',
             align: 'left',
@@ -229,13 +256,13 @@ function linkChart() {
     });
 
     for (const key in strucData) {
-        finalData.push({x: key, y: strucData[key]});
+        finalData.push({ x: key, y: strucData[key] });
     }
 
     var options = {
         series: [{
             name: "Aufrufe",
-            data: finalData.sort((a,b) => b.y - a.y)
+            data: finalData.sort((a, b) => b.y - a.y)
         }],
         chart: {
             type: 'bar',

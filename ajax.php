@@ -27,9 +27,9 @@ if(isset($_POST["action"]) && !empty($_POST["action"])) {
 	function addAnalytics($conn) {
 		function convertBool($string){
 			if($string == "true"){
-				return true;
+				return "true";
 			}
-			return false;
+			return "false";
 		}
 
 		$data = $_POST['data'];
@@ -64,6 +64,7 @@ if(isset($_POST["action"]) && !empty($_POST["action"])) {
 			'".$data["windowHeight"]."',
 			'".json_encode($data["linkClickhistory"])."'
 		)";
+		echo $insert_data;
 		$conn->query($insert_data);
 		exit();
 	}

@@ -54,6 +54,10 @@ include '../dbConfig.php'; ?>
                             </div>
                         </div>
                     </div>
+                    <div class="col-3">
+                        <!-- <div class="chart">
+                        </div> -->
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-8">

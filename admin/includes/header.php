@@ -59,7 +59,7 @@ if (isset($_GET['action']) and $_GET['action'] == "logout") {
     } ?>
 </head>
 
-<body class="page">
+<body class="page dark">
     <header>
         <div class="container-large">
             <div class="row">
@@ -75,8 +75,9 @@ if (isset($_GET['action']) and $_GET['action'] == "logout") {
                             <li><a class="headerlink" href="<?php echo get_directory_url(); ?>admin/settings.php"><i
                                         class="fas fa-cogs"></i><span>Einstellungen</span></a></li>
                             <?php if (isset($_SESSION['login'])) {
-                            echo '<li><a class="headerlink" data-ajax="false" href="?action=logout"><i class="fas fa-sign-out-alt"></i><span>ausloggen</span></a></li>';
-                        } ?>
+                                echo '<li><a class="headerlink" data-ajax="false" href="?action=logout"><i class="fas fa-sign-out-alt"></i><span>ausloggen</span></a></li>';
+                            } ?>
+                            <li><span class="headerlink theme"><i title="Dunkler Modus" class="fa-solid dark fa-moon"></i><i title="Heller Modus" class="fa-solid light fa-sun"></i></span></li>
                         </ul>
                     </nav>
                 </div>
