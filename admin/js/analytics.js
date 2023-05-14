@@ -72,10 +72,10 @@ function visitorChart() {
             height: 400,
             type: 'line',
             zoom: {
-                enabled: false
+                enabled: true
             },
             toolbar: {
-                show: false,
+                show: true,
             }
         },
         stroke: {

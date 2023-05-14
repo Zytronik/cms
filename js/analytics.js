@@ -99,12 +99,14 @@ getAnalyitics();
 window.onbeforeunload = function(){
     info.timeLeft = new Date();
     sendData();
+    /* return "test"; */
 };
 
 function sendData(){
     $.ajax({
         url: "http://localhost/cms/ajax.php",
         method: 'POST',
+        async: false, 
         data: {
             action: 'addAnalytics',
             data: info
